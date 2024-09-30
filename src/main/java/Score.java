@@ -1,6 +1,6 @@
 public class Score {
     private String word ;
-    private int score ;
+    private Letter score ;
 
     public Score(String word) {
         this.word = word ;
@@ -12,13 +12,13 @@ public class Score {
     }
 
     public void assess(int i, String attempt) {
-        if (word.equals(attempt)) this.score += 1;
+        if (word.equals(attempt)) this.score = Letter.CORRECT;
         else {
-            this.score += 0;
+            this.score =Letter.INCORRECT;
         }
     }
 
-    public Integer getScore() {
+    public Letter getScore() {
         return this.score;
     }
 }

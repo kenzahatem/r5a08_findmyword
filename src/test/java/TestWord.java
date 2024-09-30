@@ -10,8 +10,8 @@ public class TestWord {
 
         //Act
         Score score = word.guess("B") ;
-        Integer Actual = score.getScore() ;
-        Integer Expected = 0 ;
+        Letter Actual = score.getScore() ;
+        Letter Expected = Letter.INCORRECT ;
         assertThat(Actual).isEqualTo(Expected) ;
     }
 
@@ -19,8 +19,8 @@ public class TestWord {
     public void should_check_one_correct_letter(){
         Word word = new Word("E") ;
         Score score = word.guess("E") ;
-        Integer Actual = score.getScore() ;
-        Integer Expected = 1 ;
+        Letter Actual = score.getScore() ;
+        Letter Expected = Letter.CORRECT ;
         //word.score()
         assertThat(Actual).isEqualTo(Expected) ;
 
