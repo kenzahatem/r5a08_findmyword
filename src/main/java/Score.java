@@ -1,24 +1,37 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Score {
-    private String word ;
-    private Letter score ;
+    private final String word ;
+    private List<Letter> scores= new ArrayList<Letter>();
+    private int position=0 ;
 
     public Score(String word) {
         this.word = word ;
     }
 
-
     public Letter letter(int i) {
-        return Letter.INCORRECT ;
+        return this.scores.get(i) ;
     }
 
-    public void assess(int i, String attempt) {
-        if (word.equals(attempt)) this.score = Letter.CORRECT;
-        else {
-            this.score =Letter.INCORRECT;
+
+    public void assess(String attempt) {
+        for ( char c : attempt.toCharArray()) {
+            this.scores.add(scoreForLetter(c)) ;
+            this.position++ ;
         }
     }
 
-    public Letter getScore() {
-        return this.score;
+    private Letter scoreForLetter(char current){
+        if (isCorrect(current)) return Letter.CORRECT ;
+        else if (isPartiallyCorrect(current)) return Letter.PART_CORRECT ;
+        else return Letter.INCORRECT ;
+    }
+
+    private boolean isPartiallyCorrect(char currentLetter){
+        return this.word.contains(String.valueOf(currentLetter)) ;
+    }
+    private boolean isCorrect(char currentLetter) {
+        return this.word.charAt(position) == currentLetter ;
     }
 }
