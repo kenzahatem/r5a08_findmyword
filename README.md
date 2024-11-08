@@ -8,6 +8,7 @@ Pour jouer à FindMyWord, un joueur dispose de six tentatives pour deviner un mo
  - La lettre correcte à la bonne position a un fond vert
  - La lettre correcte à la mauvaise position a un fond orange
  - Les lettres incorrectes qui ne figurent pas dans le mot ont un fond noir
+![](https://einfo-learning.fr/moodle/pluginfile.php/17628/mod_page/content/13/ihm_findmyword.jpg)
 ## Dans ce travail pratique j'ai appliqué le développement dirigé par les tests (TDD)
 ### Principe
 
