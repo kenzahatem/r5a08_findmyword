@@ -1,6 +1,13 @@
-# r5a8_junit_tests
+# Le jeu Find my word
+## Présentation du jeu FindMyWord
+L'application est basée sur un jeu populaire de devinette de mots. Les joueurs essaient de deviner un mot de cinq lettres. Des points sont attribués en fonction de la rapidité avec laquelle un joueur devine le mot. Le joueur reçoit des retours sur chaque tentative pour l'orienter vers la bonne réponse.
 
-## Le jeu Find my word
+## Description des règles de FindMyWord
+Pour jouer à FindMyWord, un joueur dispose de six tentatives pour deviner un mot de cinq lettres. Après chaque tentative, les lettres du mot sont mises en évidence comme suit :
+
+ - La lettre correcte à la bonne position a un fond vert
+ - La lettre correcte à la mauvaise position a un fond orange
+ - Les lettres incorrectes qui ne figurent pas dans le mot ont un fond noir
 ## Dans ce travail pratique j'ai appliqué le développement dirigé par les tests (TDD)
 ### Principe
 
